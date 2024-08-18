@@ -2,8 +2,8 @@ backend:
   name: github
   branch: main
   repo: serbia70/astro-paper-DecapCMS
-  site_domain: astro-paper-DecapCMS.vercel.app
-  base_url: https://astro-paper-DecapCMS.vercel.app
+  site_domain: astro-paper-decapcms.vercel.app
+  base_url: https://astro-paper-decapcms.vercel.app/
   auth_endpoint: oauth
 
 media_folder: public/uploads
