@@ -1,3 +1,6 @@
+import vercel from "@astrojs/vercel/serverless";
+import decapCmsOauth from "astro-decap-cms-oauth";
+import { defineConfig } from "astro/config";
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
@@ -6,8 +9,6 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
-import decapCmsOauth from "astro-decap-cms-oauth";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-decap-cms-oauth.vercel.app",
@@ -15,24 +16,34 @@ export default defineConfig({
   output: "server",
   adapter: vercel({ functionPerRoute: false }),
 
-  }), react(), sitemap(), decapCmsOauth()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    sitemap(),
+  ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, {
-      test: "Table of contents"
-    }]],
+    remarkPlugins: [
+      remarkToc,
+      [
+        remarkCollapse,
+        {
+          test: "Table of contents",
+        },
+      ],
+    ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
-      themes: {
-        light: "min-light",
-        dark: "night-owl"
-      },
-      wrap: true
-    }
+      themes: { light: "min-light", dark: "night-owl" },
+      wrap: true,
+    },
   },
   vite: {
     optimizeDeps: {
-      exclude: ["@resvg/resvg-js"]
-    }
+      exclude: ["@resvg/resvg-js"],
+    },
   },
-  scopedStyleStrategy: "where"
+  scopedStyleStrategy: "where",
 });
+
