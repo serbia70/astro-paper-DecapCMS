@@ -11,17 +11,16 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-decap-cms-oauth.vercel.app",
-  integrations: [decapCmsOauth()],
+  site: SITE.website,
   output: "server",
   adapter: vercel({ functionPerRoute: false }),
-
   integrations: [
-    tailwind({
+	tailwind({
       applyBaseStyles: false,
     }),
     react(),
     sitemap(),
+	decapCmsOauth(),
   ],
   markdown: {
     remarkPlugins: [
@@ -46,4 +45,3 @@ export default defineConfig({
   },
   scopedStyleStrategy: "where",
 });
-
