@@ -17,7 +17,8 @@ collections:
     preview_path_date_field: "date"
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: "Source", name: "source", widget: "string" }
+      - { label: "作者", name: "Author", widget: "string",required: false }
+      - { label: "精选", name: "featured",  required: false }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Featured Image", name: "img", widget: "image" }
       - { label: "发布日期", name: "date", widget: "datetime" }
