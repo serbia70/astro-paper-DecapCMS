@@ -21,9 +21,9 @@ collections:
       - { label: "精选", name: "featured", widget: "string", required: false }
       - { label: "slug", name: "slug", widget: "string" }
       - { label: "图像", name: "img", widget: "image", required: false}
-      - { label: "发布日期", name: "date", widget: "datetime" }
+      - { label: "发布日期", name: "pubDatetime", widget: "datetime" }
       - { label: "更新日期", name: "modDatetime", widget: "datetime", required: false}
       - { label: "标题", name: "title", widget: "string" }
-      - { label: "标签", name: "tags", widget: "list", default: ["post"] }
-      - { label: "描述", name: "description", widget: "list", default: ["post"] }
+      - { label: "标签", name: "tags", widget: "list" }
+      - { label: "描述", name: "description", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
