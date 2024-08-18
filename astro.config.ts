@@ -11,15 +11,15 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  output: "server",
-  adapter: vercel(),
+  output: "hybrid",
+  adapter: vercel({ functionPerRoute: false }),
   integrations: [
-	tailwind({
+    tailwind({
       applyBaseStyles: false,
     }),
     react(),
     sitemap(),
-	decapCmsOauth(),
+	decapCmsOauth()
   ],
   markdown: {
     remarkPlugins: [
