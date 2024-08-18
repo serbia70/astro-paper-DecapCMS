@@ -13,7 +13,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   site: SITE.website,
   output: "server",
-  adapter: vercel({ functionPerRoute: false }),
+  adapter: vercel(),
   integrations: [
 	tailwind({
       applyBaseStyles: false,
