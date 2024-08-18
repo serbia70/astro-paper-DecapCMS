@@ -25,5 +25,5 @@ collections:
       - { label: "更新日期", name: "modDatetime", widget: "datetime", required: false}
       - { label: "标题", name: "title", widget: "string" }
       - { label: "标签", name: "tags", widget: "list" }
-      - { label: "描述", name: "description", widget: "list" }
+      - { label: "描述", name: "description" }
       - { label: "Body", name: "body", widget: "markdown" }
