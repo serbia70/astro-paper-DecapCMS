@@ -10,8 +10,8 @@ media_folder: public/uploads
 public_folder: /uploads
 
 collections:
-  - name: "news" # Used in routes, e.g., /admin/collections/blog
-    label: "News" # Used in the UI
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "blog" # Used in the UI
     folder: "src/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     preview_path_date_field: "date"
