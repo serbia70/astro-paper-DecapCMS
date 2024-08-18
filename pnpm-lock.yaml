@@ -20,6 +20,9 @@ importers:
       astro:
         specifier: ^4.13.0
         version: 4.14.2(rollup@4.20.0)(typescript@5.5.4)
+      astro-decap-cms-oauth:
+        specifier: ^0.3.1
+        version: 0.3.1(astro@4.14.2(rollup@4.20.0)(typescript@5.5.4))
       fuse.js:
         specifier: ^7.0.0
         version: 7.0.0
@@ -986,6 +989,11 @@ packages:
   array-union@2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
+
+  astro-decap-cms-oauth@0.3.1:
+    resolution: {integrity: sha512-DrRlhox1a3G8vI2RY42RG9exQQiiVpDFHrso4HYh9DnrNEzFQ0bc32h+mCrmJQ92fJ6MCQaTd/vX/gzK4GvBNA==}
+    peerDependencies:
+      astro: ^3.0.0 || ^4.0.0
 
   astro-eslint-parser@0.16.3:
     resolution: {integrity: sha512-CGaBseNtunAV2DCpwBXqTKq8+9Tw65XZetMaC0FsMoZuLj0gxNIkbCf2QyKYScVrNOU7/ayfNdVw8ZCSHBiqCg==}
@@ -3791,6 +3799,10 @@ snapshots:
   array-iterate@2.0.1: {}
 
   array-union@2.1.0: {}
+
+  astro-decap-cms-oauth@0.3.1(astro@4.14.2(rollup@4.20.0)(typescript@5.5.4)):
+    dependencies:
+      astro: 4.14.2(rollup@4.20.0)(typescript@5.5.4)
 
   astro-eslint-parser@0.16.3:
     dependencies:
